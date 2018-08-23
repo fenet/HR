@@ -1,6 +1,7 @@
 class VacanciesController < ApplicationController
-   before_action :authenticate_admin!, except: [:index]
+  before_action :authenticate_admin!, except: [:index]
   before_action :find_vacancy, only: [:edit, :update, :delete]
+  
   def index
      @vacancies = Vacancy.order('created_at DESC')
      @vacancies = Vacancy.paginate(:page => params[:page], :per_page => 9).order('created_at DESC')
