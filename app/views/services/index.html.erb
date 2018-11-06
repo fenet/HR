@@ -207,7 +207,7 @@ a {
     border-bottom: 1px solid #ddd;
 }
 
- 
+
 .area-title {
     margin-bottom: 50px;
     position: relative;
@@ -618,13 +618,21 @@ a {
     }
 </style>
 
+<div id="google_translate_element">
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
     <!--SERVICE AREA-->
     <section class="service-area-two section-padding gray-bg">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
-                    
+
                     <div class="area-title caption team-member wow flipInY" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <h2>Welcome to Our Service</h2>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, </p>
@@ -646,7 +654,7 @@ a {
                         <div class="about-content">
                             <h2>We have 25 years experience in this passion</h2>
                             <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum,</p>
-                             
+
                         </div>
                         <div class="about-count">
                             <div class="single-about-count">
@@ -674,7 +682,7 @@ a {
                     <div class="service-content wow fadeIn">
                         <h2>We offer <br>quick, powerful <br>logistics and <br> Human resource Solution</h2>
                         <p>I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you.</p>
-                        
+
                     </div>
                 </div>
                 <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12">
@@ -740,13 +748,13 @@ a {
                                 <div class="service-icon-hexagon">
                                     <div class="hex">
                                         <div class="service-icon">
-                                             
+
                                         </div>
                                     </div>
                                 </div>
                                 <div class="service-details">
                                     <h4 style="color: #1e88e5;">Ware House</h4>
-                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                 </div>
                             </div>
                             <div class="single-service">
@@ -757,7 +765,7 @@ a {
                                 </div>
                                 <div class="service-details">
                                     <h4 style="color: #1e88e5;">Road Freight</h4>
-                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                 </div>
                             </div>
                             <div class="single-service">
@@ -768,7 +776,7 @@ a {
                                 </div>
                                 <div class="service-details">
                                     <h4 style="color: #1e88e5;">Sea Freight</h4>
-                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                 </div>
                             </div>
                             <div class="single-service">
@@ -779,7 +787,7 @@ a {
                                 </div>
                                 <div class="service-details">
                                     <h4 style="color: #1e88e5;">Air Freight</h4>
-                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                 </div>
                             </div>
                              <div class="single-service">
@@ -790,7 +798,7 @@ a {
                                 </div>
                                 <div class="service-details">
                                     <h4 style="color: #1e88e5;">new gen</h4>
-                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p> 
+                                    <p style="color: black; font-weight: bold;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
                                 </div>
                             </div>
                         </div>
@@ -799,7 +807,7 @@ a {
             </div>
         </div>
     </section>
-    
+
      <div class="row">
                      <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                         <div class="service-catalouge-content-area wow fadeIn">
@@ -836,14 +844,14 @@ a {
               <div class="carousel-inner">
 
             <% @services.each do |index| %>
-               
-               <div class='item <%= "active" if index == @services.first %>'> 
+
+               <div class='item <%= "active" if index == @services.first %>'>
                  <%= index.company_name %>
-                 
+
                <div>
                  <%= index.position %>
                </div>
-               <div>  
+               <div>
                 <%= index.testimony %>
                </div>
 
@@ -851,14 +859,10 @@ a {
 
             <% end %>
 
-              </div>                   
-            </div>                    
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section><!--/#twitter-service-->
-
-
-
-       

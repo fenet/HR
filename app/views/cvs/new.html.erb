@@ -6,7 +6,7 @@ if (window.location.href.substr(-2) !== '?r')
 }
 /*window.onload = function ()
 {
-  if (!window.location.hash) 
+  if (!window.location.hash)
   {
     window.location = window.location + '#loaded';
     window.location.reload();
@@ -21,7 +21,7 @@ if (window.location.href.substr(-2) !== '?r')
   {
     $('.nav-pills > .active').prev('li').find('a').trigger('click');
    } );
-  
+
 </script>
 <style type="text/css">
 .btn-line.btn-default {
@@ -50,8 +50,8 @@ if (window.location.href.substr(-2) !== '?r')
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
-   
-} 
+
+}
 .btn:hover {
   color: #fff;
    background-color:#028fcc;
@@ -62,7 +62,7 @@ if (window.location.href.substr(-2) !== '?r')
 
 .area-title h2::before,
 .area-title h2::after {
-   
+
     bottom: 0;
     content: "";
     height: 2px;
@@ -92,12 +92,20 @@ if (window.location.href.substr(-2) !== '?r')
 
 </style>
 
+<div id="google_translate_element">
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
- 
+
     <div class="container">
     <div class="row">
              <div class="heading wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
-        
+
            <div class="col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3 col-sm-12 col-xs-12">
            <div class="area-title text-center wow fadeIn">
            <br>
@@ -132,8 +140,8 @@ if (window.location.href.substr(-2) !== '?r')
 </div>
 <div class="tab-content">
  <p>Fields marked with an asterisk ( <span style="color: red;">*</span>  ) are mandatory</p>
- 
- 
+
+
   <div id="cv_file" class="tab-pane fade">
     <h3>CV Document Upload</h3>
     <fieldset>
@@ -152,13 +160,13 @@ if (window.location.href.substr(-2) !== '?r')
         <legend><span class="label label-info">Already have A CV Document, Upload Here</span></legend>
 
           <div class="col s12 col-lg-4">
-        <span class="label label-info">Full Name <span style="color: red;">( * )</span></span> 
+        <span class="label label-info">Full Name <span style="color: red;">( * )</span></span>
 <br><br>
-       
+
   <%= e.text_field :cv_title, maxlength: 40, :size=>"40" ,  :required => true ,class: "form-control" %>
   </div>
   <div class="col s12 col-lg-4">
-  <span class="label label-info">Field of Study <span style="color: red;">( * )</span></span> 
+  <span class="label label-info">Field of Study <span style="color: red;">( * )</span></span>
 <br><br>
    <%= e.text_field :field_of_study,  maxlength: 200 ,  :required => true ,class: "form-control" %>
 </div>
@@ -175,20 +183,20 @@ if (window.location.href.substr(-2) !== '?r')
        <%= e.select(:degree_level,  [['TVTE', 'TVTE'],['High School', 'High School'], ['Certification', 'Certification'], ['Vocational', 'Vocational'], ['Associate Degree', 'Associate Degree'], ['Bachelor', 'Bachelor'], ['Masters', 'Masters'], ['Doctorate', 'Doctorate'] , ['Advanced Diploma' , 'Advanced Diploma'] , ['Post Graduate Diploma' , 'Post Graduate Diploma'] , ['Professional' , 'Professional'] , ['Other' , 'Other']   ])  %>
         </div>
 
-    
+
   </div>
   <br>
      <div class="input-field col s12">
      <%= e.file_field :upload_cv, accept: 'pdf,docx',class: "form-control" %>
      <div class="alert alert-danger">
-Only <strong> Word Document(Docx) or PDF is Allowed</strong> 
+Only <strong> Word Document(Docx) or PDF is Allowed</strong>
             </div>
                </div>
           </fieldset>
           <div class="col-md-offset-5">
 <br>
     <%= e.button "Upload CV/Resume", class: "btn btn-success" %>
-   
+
     </div>
      </div>
   <%end%>
@@ -214,10 +222,10 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
            <div class=" input-field col s12">
         <fieldset>
         <legend> Build CV</legend>
-       
+
           <div class="col s12 col-lg-4">
           <br>
-        <span class="label label-info " for="inputlg">Full Name <span style="color: red;">( * )</span></span> 
+        <span class="label label-info " for="inputlg">Full Name <span style="color: red;">( * )</span></span>
         <br>  <br>
   <%= f.text_field :cv_title,  maxlength: 40, :size=>"40" ,  :required => true ,class: "form-control input-default" ,:id=>"inputdefault" ,
   :type=>"text" %>
@@ -225,14 +233,14 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
 
   <div class="col s12 col-lg-4">
   <br>
-    <span class="label label-info">Field Of Study <span style="color: red;">( * )</span></span> 
+    <span class="label label-info">Field Of Study <span style="color: red;">( * )</span></span>
     <br><br>
      <%= f.text_field :field_of_study,  maxlength: 200 ,  :required => true ,class: "form-control" %>
      </div>
      <div class="col s12 col-lg-4 ">
      <br>
    <span class="label label-info">Name of Institution <span style="color: red;">( * )</span></span>
-   <br><br> 
+   <br><br>
     <%= f.text_field :institution_name, maxlength: 60, :required => true,  class: "form-control" %>
     </div>
   </div>
@@ -241,10 +249,10 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
     <div class="col s12 col-lg-4 ">
     <br>
   <span class="label label-info">Job Category <span style="color: red;">( * )</span></span> <!-- should be dropdown-->
-  <br> 
+  <br>
   <br>
  <%= f.select(:job_category ,[['Social Worker', 'Social Worker'], ['Madrid', 'Madrid'], ['COmputer Science','COmputer Science'], ['Marketing', 'Marketing'], ['Accounting', 'Accounting'], ['Biology', 'Biology'], ['Geology', 'Geology']]) %>
- 
+
 </div>
 <div class="col s12 col-lg-4 col-md-pull-2">
 <br>
@@ -255,18 +263,18 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
 
     <div class="col-md-4 col-md-offset-3">
     <br>
-    <span class="label label-info">Admission Year <span style="color: red;">( * )</span></span> 
+    <span class="label label-info">Admission Year <span style="color: red;">( * )</span></span>
      <%= f.date_field :admission_year, :required => true , :start_year=>1950, class: "form-control form-group" %>
      <span class="label label-info">Graduation Year <span style="color: red;">( * )</span></span>
        <%= f.date_field :graduation_year,  :required => true , :start_year=>1950 ,class: "form-group form-control" %>
-    
+
        </div>
 
     <br>
      <div class="input-field col s12">
      <div class="col s12 col-lg-4 col-md-offset-5 col-xs-offset-2"><br>
-     <a class="btn btn-default btn-lg btn-round btn-line disabled next" data-toggle="pill" href="#"  ><span class="glyphicon glyphicon-backward"></span> Previous</a> 
-    <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#work"  > Next <span class="glyphicon glyphicon-forward"></span> </a> 
+     <a class="btn btn-default btn-lg btn-round btn-line disabled next" data-toggle="pill" href="#"  ><span class="glyphicon glyphicon-backward"></span> Previous</a>
+    <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#work"  > Next <span class="glyphicon glyphicon-forward"></span> </a>
 </div>
 </div>
 
@@ -276,17 +284,17 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
             <fieldset>
         <legend>Work Experiance / Career Level</legend>
         <div class="input-field col s12 col-lg-4">
-        <span class="label label-info">Job Title</span> 
+        <span class="label label-info">Job Title</span>
         <br><br>
          <%= f.text_field :job_title, maxlength: 200 ,  class: "form-control" %>
          </div>
          <div class="input-field col s12 col-lg-4">
-         <span class="label label-info">Company Name</span> 
+         <span class="label label-info">Company Name</span>
          <br><br>
           <%= f.text_field :company_name, maxlength: 20 ,  class: "form-control" %>
           </div>
             <div class="input-field col s12 col-lg-4">
-            <span class="label label-info">Type of Organization</span> 
+            <span class="label label-info">Type of Organization</span>
             <br><br>
              <%= f.text_field :type_of_organization,  maxlength: 200 ,  class: "form-control" %>
              </div>
@@ -296,20 +304,20 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
           <span class="label label-info">Start Date</span>
            <%= f.date_field :start_date, :start_year=>1950, class: "form-control "  %>
            </div>
-           <br> 
+           <br>
            <div class="input-field col s12 col-lg-4">
            <br>
            <span class="label label-info">End Date</span>
             <%= f.date_field :end_date,:start_year=>1950, class: "form-control" %>
            </div>
-            
 
-            
+
+
            </fieldset><br><br><br>
                <div class="input-field col s12">
                  <div class="col s12 col-lg-4 col-md-offset-4 col-xs-offset-2">
-                  <a class="btn btn-default btn-lg btn-round btn-line next" data-toggle="pill" href="#personal"  ><span class="glyphicon glyphicon-backward"></span>  Previous</a> 
-                  <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#skill">Next <span class="glyphicon glyphicon-forward"></span> </a> 
+                  <a class="btn btn-default btn-lg btn-round btn-line next" data-toggle="pill" href="#personal"  ><span class="glyphicon glyphicon-backward"></span>  Previous</a>
+                  <a class="btn btn-default btn-lg btn-round btn-line prev" data-toggle="pill" href="#skill">Next <span class="glyphicon glyphicon-forward"></span> </a>
                 </div>
               </div>
   </div>
@@ -319,7 +327,7 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
         <legend>Additional Skill</legend>
     <div class="input-field col s12">
 
-             <span class="label label-info">Additional Skills </span> 
+             <span class="label label-info">Additional Skills </span>
              <br><br>
               <%= f.text_area :skills,   maxlength: 400 , class: "form-control" ,
 :rows=>"5" ,:id=>"comment" %>
@@ -339,23 +347,23 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
         <legend>Contact Address</legend>
   <div class="input-field col s12 col-lg-4">
   <br>
-        <span class="label label-info ">Email <span style="color: red;">( * )</span></span> 
+        <span class="label label-info ">Email <span style="color: red;">( * )</span></span>
         <br><br>
          <%= f.text_field :email, maxlength: 40 ,   class: "form-control", :type=>"email" %>
          </div>
          <div class="input-field col s12 col-lg-4">
          <br>
-         <span class="label label-info">Phone Number <span style="color: red;">( * )</span></span> 
+         <span class="label label-info">Phone Number <span style="color: red;">( * )</span></span>
          <br><br>
           <%= f.text_field :phone_number,  maxlength: 13 ,    class: "form-control", :type=>"number" %>
           </div>
-         
+
             <div class="input-field col s12 col-lg-4">
             <br>
-            <span class="label label-info">Address</span> 
+            <span class="label label-info">Address</span>
             <br><br>
              <%= f.text_area :address, maxlength: 100 ,  class: "form-control ", :type=>"text" %>
-            
+
              </div>
               </fieldset>
               <div class="input-field col s12">
@@ -364,16 +372,12 @@ Only <strong> Word Document(Docx) or PDF is Allowed</strong>
                    <a data-toggle="pill" href="#skill" class="btn btn-default btn-lg btn-round btn-line prev" ><span class="glyphicon glyphicon-backward"></span> Previous</a> <br><br><br>
                     <%= f.button "Submit CV/Resume", class: "btn btn-success" %>
           <button type="reset" class="btn btn-default" >Clear Form</button>
-            <%end%> 
+            <%end%>
               </div>
           </div>
 </div>
          </div>
-          
+
 
 </div>
 </div>
-
-
-
-

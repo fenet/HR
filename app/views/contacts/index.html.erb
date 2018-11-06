@@ -4,15 +4,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   </header>
+  <div id="google_translate_element">
+  </div>
+  <script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+  }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <section id="blog">
     <div class="container">
     <div class="row">
       <div class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp" data-wow-duration="1200ms" data-wow-delay="300ms">
           <h2> Companies We Work With</h2>
-         
+
         </div>
       </div>
-       
+
         <div class="row">
         <% @contacts.each do |f|%>
           <div class="col-sm-3">
@@ -31,11 +40,11 @@
     <%= link_to "Delete", f, method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-danger" %>
         </div>
         </div>
-           <%end%>              
-          </div> 
-           
-        <% end %>               
-      
+           <%end%>
+          </div>
+
+        <% end %>
+
      </div><br></br>
    <div class="row">
     <center>
@@ -45,35 +54,8 @@
               <%= link_to("Logout", destroy_admin_session_path, method: :delete, class: "btn btn-start " , style: "background-color: red;")%>
               <%= link_to("Back To Admin Page", ad_page_index_path,class: "btn btn-start " , style: "background-color: green;")%>
               <%= link_to("Add Another Testimony", new_contact_path,class: "btn btn-start " , style: "background-color: Blue;")%>
-           <%end%> 
+           <%end%>
          </div>
       </div>
     </center>
   </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

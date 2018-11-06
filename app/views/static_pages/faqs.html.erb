@@ -4,7 +4,7 @@
   <style>
 
 h2 {
-    font-size: 36px; 
+    font-size: 36px;
     color: #3c4a62;
     margin: 0 0 15px;
     font-weight: 700;
@@ -25,7 +25,7 @@ h2 {
 
 .area-title h2::before,
 .area-title h2::after {
-   
+
     bottom: 0;
     content: "";
     height: 2px;
@@ -92,11 +92,20 @@ div.panel {
 
 div.panel.show {
     opacity: 1;
-    max-height: 500px;  
+    max-height: 500px;
 }
 </style>
 </head>
- 
+
+<div id="google_translate_element">
+</div>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'am', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
  <section id="faq_head">
     <div class="container">
     <div class="row">
@@ -108,7 +117,7 @@ div.panel.show {
           </div>
           </div>
         </div>
-      </div> 
+      </div>
 <button class="accordion">Section 1 <i class="fa fa-question"></i></button>
 <div class="panel">
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -164,9 +173,9 @@ for (i = 0; i < acc.length; i++) {
 
 </div>
 <!--
-<style> 
+<style>
 #car {
-    
+
     position: relative;
     -webkit-animation-name: example; /* Chrome, Safari, Opera */
     -webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
@@ -175,7 +184,7 @@ for (i = 0; i < acc.length; i++) {
     animation-name: example;
     animation-duration: 4s;
     animation-iteration-count: infinite;
-    animation-direction: alternate;    
+    animation-direction: alternate;
 }
 
 
